@@ -15,7 +15,7 @@ order_payments as (
 
     from payments
     group by 1
-)
+),
 
 final as (
 
