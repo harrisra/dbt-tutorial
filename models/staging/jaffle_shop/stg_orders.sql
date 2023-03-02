@@ -1,4 +1,10 @@
-with orders as (
+with 
+
+source as (
+    select * from from {{ source('jaffle_shop', 'orders') }}
+),
+
+stagged as (
 
     select
         id as order_id,
@@ -10,4 +16,4 @@ with orders as (
 
 )
 
-select * from orders
+select * from stagged
