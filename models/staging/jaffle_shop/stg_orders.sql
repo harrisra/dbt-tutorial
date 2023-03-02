@@ -1,7 +1,7 @@
 with 
 
 source as (
-    select * from from {{ source('jaffle_shop', 'orders') }}
+    select * from {{ source('jaffle_shop', 'orders') }}
 ),
 
 stagged as (
@@ -12,7 +12,7 @@ stagged as (
         order_date,
         status
 
-    from raw.jaffle_shop.orders
+    from source
 
 )
 
